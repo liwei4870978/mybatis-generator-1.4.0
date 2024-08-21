@@ -1,5 +1,5 @@
 /**
- *    Copyright ${license.git.copyrightYears} the original author or authors.
+ *    Copyright 2006-2024 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -476,10 +476,10 @@ public class ExampleGenerator extends AbstractJavaGenerator {
                 "return;"); //$NON-NLS-1$
         method.addBodyLine("}"); //$NON-NLS-1$
         method.addBodyLine("if (value instanceof String) {");
-        method.addBodyLine("    String strValue = (String) value;");
-        method.addBodyLine("    if (strValue.trim().isEmpty()) {");
-        method.addBodyLine("        return;");
-        method.addBodyLine("    }");
+        method.addBodyLine("String strValue = (String) value;");
+        method.addBodyLine("if (strValue.trim().isEmpty()) {");
+        method.addBodyLine("    return;");
+        method.addBodyLine("}");
         method.addBodyLine("}");
         method.addBodyLine("criteria.add(new Criterion(condition, value));"); //$NON-NLS-1$
         if (criteriaLists.size() > 1) {
