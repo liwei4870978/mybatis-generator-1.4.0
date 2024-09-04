@@ -335,11 +335,13 @@ public abstract class IntrospectedTable {
     }
 
     public void addColumn(IntrospectedColumn introspectedColumn) {
-        if (introspectedColumn.isBLOBColumn()) {
-            blobColumns.add(introspectedColumn);
-        } else {
-            baseColumns.add(introspectedColumn);
-        }
+//        if (introspectedColumn.isBLOBColumn()) {
+//            blobColumns.add(introspectedColumn);
+//        } else {
+//            baseColumns.add(introspectedColumn);
+//        }
+
+        baseColumns.add(introspectedColumn);
 
         introspectedColumn.setIntrospectedTable(this);
     }
